@@ -136,9 +136,8 @@ class _BellScreenState extends State<BellScreen> {
                                         onPressed: () {
                                              Navigator.push( 
                                               context,
-                                              MaterialPageRoute(
-                                                builder: (context) => ChatPrivado(chamado[index].titulo)),
-                                                );
+                                              MaterialPageRoute(builder: (context) => ChatPrivado(chamado[index].titulo)),
+  );
   
                                         },
                                         style: ElevatedButton.styleFrom(
