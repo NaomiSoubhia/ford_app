@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:ford_app/pages/cadastro.dart';
+import 'package:ford_app/pages/chat_privado.dart';
 import 'package:ford_app/pages/initial_screen.dart';
 import 'package:ford_app/pages/login.dart';
 import 'package:ford_app/pages/menu.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         '/cadastro': (context) => const CadastroPage(),
         '/login': (context) => const LoginPage(),
         '/navegador': (context) => NavegadorPage(),
-
+       
       },
     );
   }

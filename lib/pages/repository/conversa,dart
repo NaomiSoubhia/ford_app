@@ -1,0 +1,6 @@
+class Conversa {
+  final String nome; // Nome do destinatário da conversa
+  final List<String> mensagens; // Lista de mensagens na conversa
+
+  Conversa(this.nome, this.mensagens);
+}
