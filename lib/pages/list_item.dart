@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'carro_detalhe.dart';
+
 class ListItem extends StatelessWidget {
   final String name;
   final String imagePath;
@@ -10,8 +12,8 @@ class ListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 20, horizontal: 65),
-      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+      margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 65),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -20,7 +22,7 @@ class ListItem extends StatelessWidget {
             color: Colors.grey.withOpacity(0.5),
             spreadRadius: 2,
             blurRadius: 5,
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
           ),
         ],
       ),
@@ -31,43 +33,53 @@ class ListItem extends StatelessWidget {
             width: 140,
             height: 140,
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  margin: EdgeInsets.only(top: 8), 
+                  margin: const EdgeInsets.only(top: 8),
                   child: Text(
-                    name, 
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold, 
+                    name,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 8), 
-                  child: Text(
-                    text
-                  ),
+                  margin: const EdgeInsets.only(top: 8),
+                  child: Text(text),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Align(
                   alignment: Alignment.centerRight,
                   child: Container(
-                    margin: EdgeInsets.only(right: 10, top: 20),
+                    margin: const EdgeInsets.only(right: 10, top: 20),
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, '/cadastro');
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CarroDetalhe(
+                              // Passe os parâmetros necessários para CarroDetalhe aqui
+                              // Exemplo: name, imagePath, text
+                              name: name,
+                              imagePath: imagePath,
+                              text: text,
+                            ),
+                          ),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
                         ),
-                        primary: Color(0xFF002660),
+                        backgroundColor: const Color(0xFF002660),
                       ),
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(vertical: 2, horizontal: 4),
+                      child: const Padding(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 2, horizontal: 4),
                         child: Icon(Icons.arrow_forward),
                       ),
                     ),

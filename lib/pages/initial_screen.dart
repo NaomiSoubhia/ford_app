@@ -5,7 +5,8 @@ class InitialScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView( // Envolve o Column com um SingleChildScrollView
+      body: SingleChildScrollView(
+        // Envolve o Column com um SingleChildScrollView
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -59,7 +60,7 @@ class InitialScreen extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.center,
-              child: Text.rich(
+              child: const Text.rich(
                 TextSpan(
                   text: 'Seja bem vindo, ',
                   style: TextStyle(
@@ -80,27 +81,28 @@ class InitialScreen extends StatelessWidget {
             ),
             ListView(
               shrinkWrap: true, // Permitir que a ListView tenha altura dinâmica
-              physics: NeverScrollableScrollPhysics(), // Impede que a ListView role
+              physics:
+                  NeverScrollableScrollPhysics(), // Impede que a ListView role
               children: [
                 ListItem(
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+                  text: 'Veja detalhes sobre o seu Ford EcoSport. ',
                   imagePath: 'web/images/carro1.png',
-                  name: 'teste1',
+                  name: 'Ford EcoSport',
                 ),
                 ListItem(
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+                  text: 'Veja detalhes sobre o seu Ford Maverick. ',
                   imagePath: 'web/images/carro2.png',
-                  name: 'teste2',
+                  name: 'Ford Maverick',
                 ),
                 ListItem(
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+                  text: 'Veja detalhes sobre o seu Ford Ka. ',
                   imagePath: 'web/images/carro3.png',
-                  name: 'teste3',
+                  name: 'Ford Ka',
                 ),
                 ListItem(
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+                  text: 'Veja detalhes sobre o seu Ford Bronco. ',
                   imagePath: 'web/images/carro4.png',
-                  name: 'teste3',
+                  name: 'Ford Bronco',
                 ),
               ],
             ),

@@ -1,12 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:ford_app/pages/cadastro.dart';
-import 'package:ford_app/pages/chat_privado.dart';
-import 'package:ford_app/pages/initial_screen.dart';
 import 'package:ford_app/pages/login.dart';
 import 'package:ford_app/pages/menu.dart';
 import 'pages/home.dart';
-
 
 void main() {
   runApp(MyApp());
@@ -23,7 +20,6 @@ class MyApp extends StatelessWidget {
         '/cadastro': (context) => const CadastroPage(),
         '/login': (context) => const LoginPage(),
         '/navegador': (context) => NavegadorPage(),
-       
       },
     );
   }
@@ -56,7 +52,10 @@ class _SplashScreenState extends State<SplashScreen> {
               alignment: Alignment.center,
               child: Padding(
                 padding: const EdgeInsets.all(10),
-                child: Image.asset('web/images/logo.png',width: 200,),
+                child: Image.asset(
+                  'web/images/logo.png',
+                  width: 200,
+                ),
               ),
             ),
           ),

@@ -52,11 +52,9 @@ class _ChatPrivadoState extends State<ChatPrivado> {
                   : 0,
               itemBuilder: (context, index) {
                 // Verifica se a mensagem é do usuário atual ou do destinatário
-                bool isMinhaMensagem = index % 2 == 0;
 
                 return Align(
-                 alignment:   Alignment.centerRight,
-                      
+                  alignment: Alignment.centerRight,
                   child: Container(
                     margin: EdgeInsets.symmetric(
                       vertical: 4.0,
@@ -64,13 +62,13 @@ class _ChatPrivadoState extends State<ChatPrivado> {
                     ),
                     padding: EdgeInsets.all(8.0),
                     decoration: BoxDecoration(
-                      color:  Colors.blue ,
+                      color: Colors.blue,
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: Text(
                       conversas[widget.nome]!.mensagens[index],
                       style: TextStyle(
-                        color:  Colors.white ,
+                        color: Colors.white,
                       ),
                     ),
                   ),

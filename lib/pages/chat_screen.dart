@@ -38,16 +38,13 @@ class _ChatScreenState extends State<ChatScreen> {
             Container(
               alignment: Alignment.center,
               padding: EdgeInsets.only(top: 50),
-              color: Color(Colors.grey),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  
                   Text(
                     'Novo Chamado',
                     style: TextStyle(
                       color: Colors.black,
-                      
                       fontSize: 20,
                     ),
                   ),
@@ -87,10 +84,11 @@ class _ChatScreenState extends State<ChatScreen> {
                       ),
                       SizedBox(height: 60.0),
                       Container(
-                        width: 10, 
-                        height: 40, 
+                        width: 10,
+                        height: 40,
                         child: Padding(
-                          padding: const EdgeInsets.only(left:100.0, right: 100.0),
+                          padding:
+                              const EdgeInsets.only(left: 100.0, right: 100.0),
                           child: ElevatedButton(
                             onPressed: () {
                               _enviarChamado();
@@ -102,12 +100,11 @@ class _ChatScreenState extends State<ChatScreen> {
                               ),
                             ),
                             child: Text(
-                        'Cadastrar',
-                        style: TextStyle(
-                          
-                          color: Colors.white,
-                        ),
-                      ),
+                              'Cadastrar',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
                         ),
                       ),

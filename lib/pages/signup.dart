@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:ford_app/pages/cadastro.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
 
   @override
   State<MenuPage> createState() => _MenuPageState();
-  
 }
- 
 
 class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
- return Center(
+    return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -25,7 +21,9 @@ class _MenuPageState extends State<MenuPage> {
           ),
           SizedBox(height: 70),
           Expanded(
-            child: Image.network('web/images/car.jpg',),
+            child: Image.network(
+              'web/images/car.jpg',
+            ),
           ),
           SizedBox(height: 10),
           Column(
@@ -38,10 +36,11 @@ class _MenuPageState extends State<MenuPage> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0),
                   ),
-                  primary:  Color(0xFF002660),
+                  primary: Color(0xFF002660),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 40.0, vertical: 10.0),
                   child: Text('Cadastrar'),
                 ),
               ),
@@ -53,16 +52,19 @@ class _MenuPageState extends State<MenuPage> {
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0),
-                    side: BorderSide(color: Color(0xFF002660)), // Borda na cor #002660
+                    side: BorderSide(
+                        color: Color(0xFF002660)), // Borda na cor #002660
                   ),
                   primary: Colors.white,
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
-                  child: Text('Acessar', style: TextStyle(color: Color(0xFF002660))),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 40.0, vertical: 10.0),
+                  child: Text('Acessar',
+                      style: TextStyle(color: Color(0xFF002660))),
                 ),
               ),
-             SizedBox(height: 100),
+              SizedBox(height: 100),
             ],
           ),
         ],
@@ -70,5 +72,3 @@ class _MenuPageState extends State<MenuPage> {
     );
   }
 }
-
-
