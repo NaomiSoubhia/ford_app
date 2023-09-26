@@ -7,7 +7,8 @@ class BellAlerta {
 }
 
 List<BellAlerta> alerta= [
-  BellAlerta(titulo: 'Alerta1', detalhes: 'Alerta do Chamado 1', imagem:"web/images/carro1.png"),
-  BellAlerta(titulo: 'Alerta 2', detalhes: 'Alerta do Chamado 2',imagem:"web/images/carro2.png"),
-  BellAlerta(titulo: 'Alerta 3', detalhes: 'Alerta do Chamado 3',imagem:"web/images/carro1.png"),
+  BellAlerta(titulo: 'Alerta1', detalhes: 'Alerta do carro 1', imagem:"web/images/carro1.png"),
+  BellAlerta(titulo: 'Alerta 2', detalhes: 'Alerta do carro 2',imagem:"web/images/carro2.png"),
+  BellAlerta(titulo: 'Alerta 3', detalhes: 'Alerta do carro 1',imagem:"web/images/carro1.png"),
+    BellAlerta(titulo: 'Alerta 4', detalhes: 'Alerta do carro 3',imagem:"web/images/carro3.png"),
 ];

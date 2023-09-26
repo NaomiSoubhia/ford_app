@@ -34,7 +34,8 @@ class _BellScreenState extends State<BellScreen> {
                   SizedBox(width: 30), // Espaço entre o texto e o ícone
                   IconButton(
                     icon: Padding(
-                      padding: EdgeInsets.only(top: 10), // Margem superior para o ícone
+                      padding: EdgeInsets.only(
+                          top: 10), // Margem superior para o ícone
                       child: Icon(Icons.exit_to_app, color: Color(0xFF002660)),
                     ),
                     onPressed: () {
@@ -58,7 +59,8 @@ class _BellScreenState extends State<BellScreen> {
                   Container(
                     width: 120.0,
                     margin: EdgeInsets.only(right: 10.0),
-                    padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
                     decoration: BoxDecoration(
                       color: selectedIndex == 0 ? Color(0xFF002660) : null,
                       borderRadius: BorderRadius.only(
@@ -76,7 +78,8 @@ class _BellScreenState extends State<BellScreen> {
                   Container(
                     width: 120.0,
                     margin: EdgeInsets.only(left: 10.0),
-                    padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
                     decoration: BoxDecoration(
                       color: selectedIndex == 1 ? Color(0xFF002660) : null,
                       borderRadius: BorderRadius.only(
@@ -94,51 +97,60 @@ class _BellScreenState extends State<BellScreen> {
                 ],
                 onPressed: (int index) {
                   setState(() {
-                    selectedIndex = index; // Define o índice do botão selecionado
+                    selectedIndex =
+                        index; // Define o índice do botão selecionado
                   });
                 },
-                isSelected: [selectedIndex == 0, selectedIndex == 1], // Verifica qual botão está selecionado
+                isSelected: [
+                  selectedIndex == 0,
+                  selectedIndex == 1
+                ], // Verifica qual botão está selecionado
               ),
             ),
             SizedBox(height: 20.0),
             // Exibe o conteúdo com base na opção selecionada
             selectedIndex == 0
                 ? Container(
-                    child: Column(
-                      children: [
-                        ListView.builder(
-                          itemCount: chamado.length,
-                          
-                          shrinkWrap: true, // Para evitar erros de layout
-                          itemBuilder: (context, index) {
-                            return Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                              color: Colors.grey[200],
-                              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 60.0),
-                              child: Center(
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 20, top: 25),
-                                  child: ListTile(
-                                    
-                                    leading: Image.network(alerta[index].imagem),
-                                    title:  Text(alerta[index].titulo, style: TextStyle(fontWeight: FontWeight.bold,),),
-                                    
-                                    subtitle:  Padding(
-                                        padding: const EdgeInsets.only(bottom:30.0,top: 10),
-                                        child: Text(alerta[index].detalhes),
-                                                        
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          ListView.builder(
+                            itemCount: chamado.length,
+                            shrinkWrap: true, // Para evitar erros de layout
+                            itemBuilder: (context, index) {
+                              return Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                ),
+                                color: Colors.grey[200],
+                                margin: EdgeInsets.symmetric(
+                                    vertical: 10.0, horizontal: 60.0),
+                                child: Center(
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 20, top: 25),
+                                    child: ListTile(
+                                      leading:
+                                          Image.network(alerta[index].imagem),
+                                      title: Text(
+                                        alerta[index].titulo,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
-                                    
-
+                                      subtitle: Padding(
+                                        padding: const EdgeInsets.only(
+                                            bottom: 30.0, top: 10),
+                                        child: Text(alerta[index].detalhes),
+                                      ),
+                                    ),
                                   ),
                                 ),
-                              ),
-                            );
-                          },
-                        ),
-                      ],
+                              );
+                            },
+                          ),
+                        ],
+                      ),
                     ),
                   )
                 : Container(
@@ -146,7 +158,7 @@ class _BellScreenState extends State<BellScreen> {
                       children: [
                         ListView.builder(
                           itemCount: chamado.length,
-                          
+
                           shrinkWrap: true, // Para evitar erros de layout
                           itemBuilder: (context, index) {
                             return Card(
@@ -154,39 +166,47 @@ class _BellScreenState extends State<BellScreen> {
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               color: Colors.grey[200],
-                              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 60.0),
+                              margin: EdgeInsets.symmetric(
+                                  vertical: 10.0, horizontal: 60.0),
                               child: Center(
                                 child: Padding(
-                                  padding: const EdgeInsets.only(left: 20, top: 25),
+                                  padding:
+                                      const EdgeInsets.only(left: 20, top: 25),
                                   child: ListTile(
-                                    title:  Text(chamado[index].titulo, style: TextStyle(fontWeight: FontWeight.bold,),),
-                                    
-                                    subtitle:  Padding(
-                                        padding: const EdgeInsets.only(bottom:30.0,top: 10),
-                                        child: Text(chamado[index].detalhes),
-                                                        
+                                    title: Text(
+                                      chamado[index].titulo,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
                                       ),
-                                    
+                                    ),
+                                    subtitle: Padding(
+                                      padding: const EdgeInsets.only(
+                                          bottom: 30.0, top: 10),
+                                      child: Text(chamado[index].detalhes),
+                                    ),
                                     trailing: Padding(
-                                      padding: EdgeInsets.only(right: 20), // Margem superior para o ícone
+                                      padding: EdgeInsets.only(
+                                          right:
+                                              20), // Margem superior para o ícone
                                       child: ElevatedButton(
-                                        
                                         onPressed: () {
-                                             Navigator.push( 
-                                              context,
-                                              MaterialPageRoute(builder: (context) => ChatPrivado(chamado[index].titulo)),
-  );
-  
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    ChatPrivado(
+                                                        chamado[index].titulo)),
+                                          );
                                         },
                                         style: ElevatedButton.styleFrom(
-                                         
                                           primary: Color(0xFF002660),
-                                          
                                           shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(25),
+                                            borderRadius:
+                                                BorderRadius.circular(25),
                                           ),
                                         ),
-                                        child: Icon(Icons.arrow_forward, color: Colors.white),
+                                        child: Icon(Icons.arrow_forward,
+                                            color: Colors.white),
                                       ),
                                     ),
                                   ),
