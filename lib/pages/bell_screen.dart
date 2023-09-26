@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ford_app/pages/chat_privado.dart';
+import 'package:ford_app/pages/repository/alerta.dart';
 import 'package:ford_app/pages/repository/chamado.dart';
 
 class BellScreen extends StatefulWidget {
@@ -120,11 +121,13 @@ class _BellScreenState extends State<BellScreen> {
                                 child: Padding(
                                   padding: const EdgeInsets.only(left: 20, top: 25),
                                   child: ListTile(
-                                    title:  Text(chamado[index].titulo, style: TextStyle(fontWeight: FontWeight.bold,),),
+                                    
+                                    leading: Image.network(alerta[index].imagem),
+                                    title:  Text(alerta[index].titulo, style: TextStyle(fontWeight: FontWeight.bold,),),
                                     
                                     subtitle:  Padding(
                                         padding: const EdgeInsets.only(bottom:30.0,top: 10),
-                                        child: Text(chamado[index].detalhes),
+                                        child: Text(alerta[index].detalhes),
                                                         
                                       ),
                                     
