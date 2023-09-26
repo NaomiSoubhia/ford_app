@@ -38,7 +38,7 @@ class _ChatScreenState extends State<ChatScreen> {
             Container(
               alignment: Alignment.center,
               padding: EdgeInsets.only(top: 50),
-              color: Color(Colors.grey),
+              
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

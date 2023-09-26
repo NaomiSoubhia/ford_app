@@ -102,7 +102,42 @@ class _BellScreenState extends State<BellScreen> {
             SizedBox(height: 20.0),
             // Exibe o conteúdo com base na opção selecionada
             selectedIndex == 0
-                ? Text('Conteúdo de Alertas')
+                ? Container(
+                    child: Column(
+                      children: [
+                        ListView.builder(
+                          itemCount: chamado.length,
+                          
+                          shrinkWrap: true, // Para evitar erros de layout
+                          itemBuilder: (context, index) {
+                            return Card(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              color: Colors.grey[200],
+                              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 60.0),
+                              child: Center(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 20, top: 25),
+                                  child: ListTile(
+                                    title:  Text(chamado[index].titulo, style: TextStyle(fontWeight: FontWeight.bold,),),
+                                    
+                                    subtitle:  Padding(
+                                        padding: const EdgeInsets.only(bottom:30.0,top: 10),
+                                        child: Text(chamado[index].detalhes),
+                                                        
+                                      ),
+                                    
+
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      ],
+                    ),
+                  )
                 : Container(
                     child: Column(
                       children: [
