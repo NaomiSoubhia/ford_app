@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:ford_app/pages/repository/chamado.dart';
 
 class ChatScreen extends StatefulWidget {
+  const ChatScreen({super.key});
+
   @override
   _ChatScreenState createState() => _ChatScreenState();
 }
 
 class _ChatScreenState extends State<ChatScreen> {
   final _formKey = GlobalKey<FormState>();
-  TextEditingController _tituloController = TextEditingController();
-  TextEditingController _descricaoController = TextEditingController();
+  final TextEditingController _tituloController = TextEditingController();
+  final TextEditingController _descricaoController = TextEditingController();
 
   void _enviarChamado() {
     if (_formKey.currentState != null && _formKey.currentState!.validate()) {
@@ -37,8 +39,8 @@ class _ChatScreenState extends State<ChatScreen> {
           children: [
             Container(
               alignment: Alignment.center,
-              padding: EdgeInsets.only(top: 50),
-              child: Row(
+              padding: const EdgeInsets.only(top: 50),
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
@@ -52,7 +54,7 @@ class _ChatScreenState extends State<ChatScreen> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(30.0),
+              padding: const EdgeInsets.all(30.0),
               child: Form(
                 key: _formKey,
                 child: Padding(
@@ -62,7 +64,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     children: [
                       TextFormField(
                         controller: _tituloController,
-                        decoration: InputDecoration(labelText: 'Título'),
+                        decoration: const InputDecoration(labelText: 'Título'),
                         validator: (value) {
                           if (value != null && value.isEmpty) {
                             return 'Por favor, insira um título';
@@ -70,10 +72,11 @@ class _ChatScreenState extends State<ChatScreen> {
                           return null;
                         },
                       ),
-                      SizedBox(height: 16.0),
+                      const SizedBox(height: 16.0),
                       TextFormField(
                         controller: _descricaoController,
-                        decoration: InputDecoration(labelText: 'Descrição'),
+                        decoration:
+                            const InputDecoration(labelText: 'Descrição'),
                         validator: (value) {
                           if (value != null && value.isEmpty) {
                             return 'Por favor, insira uma descrição';
@@ -82,24 +85,23 @@ class _ChatScreenState extends State<ChatScreen> {
                         },
                         maxLines: 3, // Permite várias linhas para a descrição
                       ),
-                      SizedBox(height: 60.0),
-                      Container(
+                      const SizedBox(height: 60.0),
+                      SizedBox(
                         width: 10,
                         height: 40,
                         child: Padding(
-                          padding:
-                              const EdgeInsets.only(left: 100.0, right: 100.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 60),
                           child: ElevatedButton(
                             onPressed: () {
                               _enviarChamado();
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: Color(0xFF002660),
+                              backgroundColor: const Color(0xFF002660),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25),
                               ),
                             ),
-                            child: Text(
+                            child: const Text(
                               'Cadastrar',
                               style: TextStyle(
                                 color: Colors.white,
@@ -108,7 +110,7 @@ class _ChatScreenState extends State<ChatScreen> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 16.0),
+                      const SizedBox(height: 16.0),
                     ],
                   ),
                 ),

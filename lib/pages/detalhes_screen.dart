@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class InitialScreen extends StatelessWidget {
+  const InitialScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,7 +13,7 @@ class InitialScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              margin: EdgeInsets.only(left: 20, top: 10),
+              margin: const EdgeInsets.only(left: 20, top: 10),
               alignment: Alignment.topLeft,
               child: Image.network(
                 'web/images/ford.png',
@@ -20,9 +22,10 @@ class InitialScreen extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(right: 10), // Margem de 10 à direita
+              margin:
+                  const EdgeInsets.only(right: 10), // Margem de 10 à direita
               child: IconButton(
-                icon: Icon(Icons.exit_to_app, color: Color(0xFF002660)),
+                icon: const Icon(Icons.exit_to_app, color: Color(0xFF002660)),
                 onPressed: () {
                   Navigator.pushNamed(context, '/home');
                 },

@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
-
-import 'carro_detalhe.dart';
+import 'package:ford_app/pages/carro_detalhe.dart';
 
 class ListItem extends StatelessWidget {
   final String name;
   final String imagePath;
   final String text;
+  final String id;
 
-  ListItem({required this.text, required this.imagePath, required this.name});
+  const ListItem(
+      {super.key,
+      required this.id,
+      required this.text,
+      required this.imagePath,
+      required this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +67,7 @@ class ListItem extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) => CarroDetalhe(
-                              // Passe os parâmetros necessários para CarroDetalhe aqui
-                              // Exemplo: name, imagePath, text
+                              id: id,
                               name: name,
                               imagePath: imagePath,
                               text: text,

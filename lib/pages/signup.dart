@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -17,15 +16,15 @@ class _MenuPageState extends State<MenuPage> {
         children: [
           SizedBox(
             height: 55,
-            child: Image.network('web/images/ford.png'),
+            child: Image.asset('web/images/ford.png'),
           ),
-          SizedBox(height: 70),
+          const SizedBox(height: 70),
           Expanded(
-            child: Image.network(
+            child: Image.asset(
               'web/images/car.jpg',
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Column(
             children: [
               ElevatedButton(
@@ -36,15 +35,15 @@ class _MenuPageState extends State<MenuPage> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0),
                   ),
-                  primary: Color(0xFF002660),
+                  backgroundColor: const Color(0xFF002660),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 40.0, vertical: 10.0),
+                child: const Padding(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
                   child: Text('Cadastrar'),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/login');
@@ -52,19 +51,19 @@ class _MenuPageState extends State<MenuPage> {
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0),
-                    side: BorderSide(
+                    side: const BorderSide(
                         color: Color(0xFF002660)), // Borda na cor #002660
                   ),
-                  primary: Colors.white,
+                  backgroundColor: Colors.white,
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 40.0, vertical: 10.0),
+                child: const Padding(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0),
                   child: Text('Acessar',
                       style: TextStyle(color: Color(0xFF002660))),
                 ),
               ),
-              SizedBox(height: 100),
+              const SizedBox(height: 100),
             ],
           ),
         ],
