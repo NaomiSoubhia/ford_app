@@ -131,7 +131,7 @@ class _BellScreenState extends State<BellScreen> {
                                         left: 20, top: 25),
                                     child: ListTile(
                                       leading:
-                                          Image.network(alerta[index].imagem),
+                                          Image.asset(alerta[index].imagem),
                                       title: Text(
                                         alerta[index].titulo,
                                         style: TextStyle(

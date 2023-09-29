@@ -15,7 +15,7 @@ class InitialScreen extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(left: 20, top: 10),
                   alignment: Alignment.topLeft,
-                  child: Image.network(
+                  child: Image.asset(
                     'web/images/ford.png',
                     width: 80,
                     height: 80,
