@@ -87,7 +87,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       ),
                       SizedBox(height: 60.0),
                       Container(
-                        width: 10, 
+                        width: 200, 
                         height: 40, 
                         child: Padding(
                           padding: const EdgeInsets.only(left:100.0, right: 100.0),
@@ -96,10 +96,12 @@ class _ChatScreenState extends State<ChatScreen> {
                               _enviarChamado();
                             },
                             style: ElevatedButton.styleFrom(
+                              
                               primary: Color(0xFF002660),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25),
                               ),
+                              minimumSize: Size(200, 40),
                             ),
                             child: Text(
                         'Cadastrar',
