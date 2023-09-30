@@ -100,6 +100,7 @@ class _ChatScreenState extends State<ChatScreen> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25),
                               ),
+                              minimumSize: Size(200, 40),
                             ),
                             child: const Text(
                               'Cadastrar',

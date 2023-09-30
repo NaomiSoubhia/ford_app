@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ford_app/pages/signup.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
