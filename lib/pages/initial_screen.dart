@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:ford_app/pages/list_item.dart';
 
 class InitialScreen extends StatelessWidget {
+  const InitialScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView( // Envolve o Column com um SingleChildScrollView
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -13,7 +15,7 @@ class InitialScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  margin: EdgeInsets.only(left: 20, top: 10),
+                  margin: const EdgeInsets.only(left: 20, top: 10),
                   alignment: Alignment.topLeft,
                   child: Image.asset(
                     'web/images/ford.png',
@@ -22,9 +24,10 @@ class InitialScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(right: 10), // Margem de 10 à direita
+                  margin: const EdgeInsets.only(right: 10),
                   child: IconButton(
-                    icon: Icon(Icons.exit_to_app, color: Color(0xFF002660)),
+                    icon:
+                        const Icon(Icons.exit_to_app, color: Color(0xFF002660)),
                     onPressed: () {
                       Navigator.pushNamed(context, '/home');
                     },
@@ -33,7 +36,7 @@ class InitialScreen extends StatelessWidget {
               ],
             ),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 10),
+              margin: const EdgeInsets.symmetric(vertical: 10),
               alignment: Alignment.center,
               child: Stack(
                 alignment: Alignment.center,
@@ -43,7 +46,8 @@ class InitialScreen extends StatelessWidget {
                     height: 140,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(70),
-                      border: Border.all(color: Color(0xFF002660), width: 5),
+                      border:
+                          Border.all(color: const Color(0xFF002660), width: 5),
                     ),
                   ),
                   ClipOval(
@@ -59,7 +63,7 @@ class InitialScreen extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.center,
-              child: Text.rich(
+              child: const Text.rich(
                 TextSpan(
                   text: 'Seja bem vindo, ',
                   style: TextStyle(
@@ -79,28 +83,32 @@ class InitialScreen extends StatelessWidget {
               ),
             ),
             ListView(
-              shrinkWrap: true, // Permitir que a ListView tenha altura dinâmica
-              physics: NeverScrollableScrollPhysics(), // Impede que a ListView role
-              children: [
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              children: const [
                 ListItem(
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+                  id: "1",
+                  text: 'Veja detalhes sobre o seu Ford EcoSport. ',
                   imagePath: 'web/images/carro1.png',
-                  name: 'teste1',
+                  name: 'Ford EcoSport',
                 ),
                 ListItem(
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+                  id: "2",
+                  text: 'Veja detalhes sobre o seu Ford Maverick. ',
                   imagePath: 'web/images/carro2.png',
-                  name: 'teste2',
+                  name: 'Ford Maverick',
                 ),
                 ListItem(
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+                  id: "3",
+                  text: 'Veja detalhes sobre o seu Ford Ka. ',
                   imagePath: 'web/images/carro3.png',
-                  name: 'teste3',
+                  name: 'Ford Ka',
                 ),
                 ListItem(
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+                  id: "4",
+                  text: 'Veja detalhes sobre o seu Ford Bronco. ',
                   imagePath: 'web/images/carro4.png',
-                  name: 'teste3',
+                  name: 'Ford Bronco',
                 ),
               ],
             ),

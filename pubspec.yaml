@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  http: ^0.13.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -62,14 +63,15 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - web/images/ford.png
-    - web/images/logo.png
-    - web/images/perfil.jpg
-    - web/images/car.jpg
-    - web/images/carro1.png
-    - web/images/carro2.png
-    - web/images/carro3.png
-    - web/images/carro4.png
+  - web/images/ford.png
+  - web/images/logo.png
+  - web/images/perfil.jpg
+  - web/images/car.jpg
+  - web/images/carro1.png
+  - web/images/carro2.png
+  - web/images/carro3.png
+  - web/images/carro4.png
+  - web/images/rotas.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

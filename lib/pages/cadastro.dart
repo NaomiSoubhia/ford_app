@@ -18,37 +18,41 @@ class _CadastroPageState extends State<CadastroPage> {
         body: SingleChildScrollView(
           child: Container(
             color: Colors.grey[200],
-            padding: EdgeInsets.all(50),
+            padding: const EdgeInsets.all(50),
             child: Container(
-              padding: EdgeInsets.all(30),
+              padding: const EdgeInsets.all(30),
               color: Colors.white,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(height: 10),
-                  Image.asset('web/images/ford.png', height: 90,),
-                  SizedBox(height: 10),
-                  Text(
+                  const SizedBox(height: 10),
+                  Image.asset(
+                    'web/images/ford.png',
+                    height: 90,
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
                     'Cadastro',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   TextFormField(
-                    decoration: InputDecoration(labelText: 'Nome'),
+                    decoration: const InputDecoration(labelText: 'Nome'),
                   ),
                   TextFormField(
-                    decoration: InputDecoration(labelText: 'E-mail'),
+                    decoration: const InputDecoration(labelText: 'E-mail'),
                   ),
                   TextFormField(
-                    decoration: InputDecoration(labelText: 'Senha'),
+                    decoration: const InputDecoration(labelText: 'Senha'),
                   ),
                   TextFormField(
-                    decoration: InputDecoration(labelText: 'Confirme a senha'),
+                    decoration:
+                        const InputDecoration(labelText: 'Confirme a senha'),
                   ),
-                  SizedBox(height: 20), 
+                  const SizedBox(height: 20),
                   Row(
                     children: [
                       Checkbox(
@@ -59,36 +63,38 @@ class _CadastroPageState extends State<CadastroPage> {
                           });
                         },
                       ),
-                      Text('Termos de uso'),
+                      const Text('Termos de uso'),
                     ],
                   ),
-                  SizedBox(height: 20), 
+                  const SizedBox(height: 20),
                   Align(
                     alignment: Alignment.bottomRight,
                     child: ElevatedButton(
-                      onPressed: _termsAccepted ? () {
-                        // Ação do botão
-                      } : null, // Desabilita o botão se os termos não forem aceitos
-                      child: Icon(Icons.arrow_forward),
+                      onPressed: _termsAccepted
+                          ? () {
+                              // Ação do botão
+                            }
+                          : null,
                       style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.all(10),
-                        backgroundColor: Color(0xFF002660),
+                        padding: const EdgeInsets.all(10),
+                        backgroundColor: const Color(0xFF002660),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25),
                         ),
-                      ),
+                      ), // Desabilita o botão se os termos não forem aceitos
+                      child: const Icon(Icons.arrow_forward),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   ElevatedButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/login');
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.transparent,
+                      backgroundColor: Colors.transparent,
                       elevation: 0,
                     ),
-                    child: Opacity(
+                    child: const Opacity(
                       opacity: 0.6,
                       child: Text(
                         'Já tenho cadastro',
@@ -108,5 +114,3 @@ class _CadastroPageState extends State<CadastroPage> {
     );
   }
 }
-
-

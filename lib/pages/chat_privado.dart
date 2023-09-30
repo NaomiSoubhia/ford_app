@@ -10,7 +10,7 @@ class Conversa {
 class ChatPrivado extends StatefulWidget {
   final String nome; // Nome do destinatário da conversa
 
-  ChatPrivado(this.nome);
+  const ChatPrivado(this.nome, {super.key});
 
   @override
   _ChatPrivadoState createState() => _ChatPrivadoState();
@@ -52,25 +52,23 @@ class _ChatPrivadoState extends State<ChatPrivado> {
                   : 0,
               itemBuilder: (context, index) {
                 // Verifica se a mensagem é do usuário atual ou do destinatário
-                bool isMinhaMensagem = index % 2 == 0;
 
                 return Align(
-                 alignment:   Alignment.centerRight,
-                      
+                  alignment: Alignment.centerRight,
                   child: Container(
-                    margin: EdgeInsets.symmetric(
+                    margin: const EdgeInsets.symmetric(
                       vertical: 4.0,
                       horizontal: 8.0,
                     ),
-                    padding: EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(8.0),
                     decoration: BoxDecoration(
-                      color:  Colors.blue ,
+                      color: Colors.blue,
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     child: Text(
                       conversas[widget.nome]!.mensagens[index],
-                      style: TextStyle(
-                        color:  Colors.white ,
+                      style: const TextStyle(
+                        color: Colors.white,
                       ),
                     ),
                   ),
@@ -79,19 +77,19 @@ class _ChatPrivadoState extends State<ChatPrivado> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
                 Expanded(
                   child: TextField(
                     controller: mensagemController,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: 'Digite sua mensagem...',
                     ),
                   ),
                 ),
                 IconButton(
-                  icon: Icon(Icons.send),
+                  icon: const Icon(Icons.send),
                   onPressed: enviarMensagem,
                 ),
               ],

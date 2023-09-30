@@ -4,6 +4,8 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 
 class LocationScreen extends StatelessWidget {
+  const LocationScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MapSample();
