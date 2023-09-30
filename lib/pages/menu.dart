@@ -26,7 +26,7 @@ class _NavegadorPageState extends State<NavegadorPage> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
     const InitialScreen(),
-    const BellScreen(),
+    BellScreen(),
     const ChatScreen(),
     const LocationScreen(),
   ];

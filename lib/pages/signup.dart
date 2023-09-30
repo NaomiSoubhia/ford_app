@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MenuPage extends StatefulWidget {
-  const MenuPage({Key? key});
+  const MenuPage({super.key});
 
   @override
   State<MenuPage> createState() => _MenuPageState();
@@ -66,7 +66,7 @@ class _MenuPageState extends State<MenuPage> {
               const SizedBox(height: 100),
             ],
           ),
-        ),
+        ],
       ),
     );
   }
